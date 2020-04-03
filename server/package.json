@@ -70,7 +70,7 @@
     "express": "^4.17.1",
     "googleapis": "^48.0.0",
     "graphql": "^14.5.8",
-    "gsheeez": "https://github.com/odjhey/gsheeez",
+    "gsheeez": "github:odjhey/gsheeez",
     "merge-graphql-schemas": "^1.7.6",
     "moment": "2.24.0",
     "mongoose": "^5.7.4",

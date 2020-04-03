@@ -9,6 +9,9 @@ import { resolvers, typeDefs } from './graphql';
 import bodyParser from 'body-parser';
 import serveIndex from 'serve-index';
 
+import { google } from 'googleapis';
+import { sheeez } from 'gsheeez';
+
 import {
   //Mongo
   userModel,
@@ -25,11 +28,17 @@ import {
   supplierGs,
   itemGs,
   scheduleLineGs,
-  purchaseOrderGs
+  purchaseOrderGs,
 } from './models';
 
 import * as controllers from './controllers';
 
+const gshez = sheeez({
+  scopes: ['https://www.googleapis.com/auth/spreadsheets'],
+  token_path: 'token.json',
+  creds_path: 'credentials.json',
+  google,
+});
 // //Database
 // mongoose.set('useFindAndModify', false);
 // const { mongoURI: db } = process.env;
