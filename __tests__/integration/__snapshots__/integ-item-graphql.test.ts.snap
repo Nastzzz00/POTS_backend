@@ -1,0 +1,231 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests delete an item 1`] = `
+Object {
+  "data": Object {
+    "deleteItem": Object {
+      "id": "1",
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`Tests should create an item 1`] = `
+Object {
+  "data": Object {
+    "createItem": Object {
+      "currency": "PHP",
+      "deliveryAddress": Object {
+        "building_name": "002",
+        "city": "Celadon",
+        "state": "Johto",
+        "street": "Elmer",
+        "zip_code": "123",
+      },
+      "description": "Beef",
+      "discount": 0.05,
+      "id": "1",
+      "itemNo": "001",
+      "productId": "0001",
+      "quantity": 10,
+      "scheduleLine": Array [
+        Object {
+          "deliveryDateAndTime": "February 25,2020 4:30PM",
+          "deliveryStatus": Array [
+            Object {
+              "dateCreated": "February 14, 2020",
+              "id": "2",
+              "status": "Delivered",
+              "timeCreated": "4:30 PM",
+            },
+          ],
+          "id": "2",
+          "quantity": 10,
+          "totalAmount": 10000,
+          "unitPrice": 1000,
+          "uom": "kilograms",
+        },
+      ],
+      "totalAmount": 10000,
+      "unitPrice": 1000,
+      "uom": "kilograms",
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`Tests should error when no item 1`] = `
+Object {
+  "data": Object {
+    "item": null,
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`Tests should fetch all items 1`] = `
+Object {
+  "data": Object {
+    "allItems": Array [
+      Object {
+        "currency": "PHP",
+        "deliveryAddress": Object {
+          "id": "A1",
+        },
+        "description": "Beef",
+        "id": "1",
+        "itemNo": "001",
+        "quantity": 10,
+        "scheduleLine": Array [
+          Object {
+            "deliveryDateAndTime": "February 25,2020 4:30PM",
+            "deliveryStatus": Array [],
+            "id": "1",
+            "quantity": 10,
+            "totalAmount": 10000,
+            "unitPrice": 1000,
+            "uom": "kilograms",
+          },
+        ],
+        "supplierStatusItem": null,
+        "totalAmount": 10000,
+        "unitPrice": 1000,
+        "uom": "kilograms",
+      },
+      Object {
+        "currency": "PHP",
+        "deliveryAddress": Object {
+          "id": "A1",
+        },
+        "description": "Beef",
+        "id": "2",
+        "itemNo": "001",
+        "quantity": 10,
+        "scheduleLine": Array [
+          Object {
+            "deliveryDateAndTime": "February 25,2020 4:30PM",
+            "deliveryStatus": Array [
+              Object {
+                "dateCreated": "February 14, 2020",
+                "id": "2",
+                "status": "Delivered",
+                "timeCreated": "4:30 PM",
+              },
+            ],
+            "id": "2",
+            "quantity": 10,
+            "totalAmount": 10000,
+            "unitPrice": 1000,
+            "uom": "kilograms",
+          },
+        ],
+        "supplierStatusItem": null,
+        "totalAmount": 10000,
+        "unitPrice": 1000,
+        "uom": "kilograms",
+      },
+    ],
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`Tests should fetch one item  1`] = `
+Object {
+  "data": Object {
+    "item": Object {
+      "currency": "PHP",
+      "deliveryAddress": Object {
+        "id": "A1",
+      },
+      "description": "Beef",
+      "id": "1",
+      "itemNo": "001",
+      "quantity": 10,
+      "scheduleLine": Array [
+        Object {
+          "deliveryDateAndTime": "February 25,2020 4:30PM",
+          "deliveryStatus": Array [],
+          "id": "1",
+          "quantity": 10,
+          "totalAmount": 10000,
+          "unitPrice": 1000,
+          "uom": "kilograms",
+        },
+      ],
+      "supplierStatusItem": null,
+      "totalAmount": 10000,
+      "unitPrice": 1000,
+      "uom": "kilograms",
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`Tests update an item 1`] = `
+Object {
+  "data": Object {
+    "updateItem": Object {
+      "id": "1",
+      "supplierStatusItem": "Dispatched",
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`Tests update an item supplierStatus 1`] = `
+Object {
+  "data": Object {
+    "updateSupplierStatusItem": null,
+  },
+  "errors": Array [
+    [GraphQLError: updateSupplierStatusItemById is not a function],
+  ],
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;

@@ -1,0 +1,21 @@
+version: "2"
+services:
+  server:
+    container_name: pots-server
+    restart: always
+    build: .
+    command: "node dist/server.js"
+    ports:
+      - "5000:8080"
+    links:
+      - epod-mongo
+    volumes:
+      - ./public/images:/usr/src/app/public/images
+    environment: 
+      mongoURI: "mongodb://epod-mongo:27017/POTS"
+      PORT: "8080"
+  pots-mongo:
+    container_name: pots-mongo
+    image: mongo
+    volumes:
+      - ./.data:/data/db

@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests should create a user 1`] = `
+Object {
+  "data": Object {
+    "createUser": Object {
+      "id": "1",
+      "password": "12345",
+      "userId": "001",
+      "userLevel": "Admin",
+      "userName": "User Name1",
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`Tests should delete a user 1`] = `
+Object {
+  "data": Object {
+    "deleteUser": null,
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`Tests should error when no user 1`] = `
+Object {
+  "data": Object {
+    "user": null,
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`Tests should fetch all user 1`] = `
+Object {
+  "data": Object {
+    "allUsers": Array [
+      null,
+      null,
+    ],
+  },
+  "errors": Array [
+    [GraphQLError: Cannot return null for non-nullable field User.id.],
+    [GraphQLError: Cannot return null for non-nullable field User.id.],
+  ],
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`Tests should fetch one user 1`] = `
+Object {
+  "data": Object {
+    "user": null,
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`Tests should update a user 1`] = `
+Object {
+  "data": Object {
+    "updateUser": null,
+  },
+  "errors": Array [
+    [GraphQLError: Cannot read property 'userId' of null],
+  ],
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;

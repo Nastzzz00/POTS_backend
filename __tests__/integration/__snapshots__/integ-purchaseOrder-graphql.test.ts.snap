@@ -1,0 +1,666 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests create a purchase order 1`] = `
+Object {
+  "data": Object {
+    "createPurchaseOrder": Object {
+      "adminStatus": "Pending",
+      "documentDate": "03/03/20200",
+      "id": "1",
+      "items": Array [
+        Object {
+          "currency": "PHP",
+          "deliveryAddress": Object {
+            "building_name": "002",
+            "city": "Celadon",
+            "id": "A1",
+            "state": "Johto",
+            "street": "Elmer",
+            "zip_code": "123",
+          },
+          "description": "Beef",
+          "discount": 0.05,
+          "id": "2",
+          "itemNo": "001",
+          "productId": "0001",
+          "quantity": 10,
+          "scheduleLine": Array [
+            Object {
+              "deliveryDateAndTime": "February 25,2020 4:30PM",
+              "deliveryStatus": Array [
+                Object {
+                  "dateCreated": "February 14, 2020",
+                  "id": "2",
+                  "status": "Delivered",
+                  "timeCreated": "4:30 PM",
+                },
+              ],
+              "id": "2",
+              "quantity": 10,
+              "totalAmount": 10000,
+              "unitPrice": 1000,
+              "uom": "kilograms",
+            },
+          ],
+          "supplierStatusItem": null,
+          "totalAmount": 10000,
+          "unitPrice": 1000,
+          "uom": "kilograms",
+        },
+      ],
+      "postingDate": "03/03/20200",
+      "purchaseOrderNo": "001",
+      "shipmentNo": "123",
+      "supplier": Object {
+        "address": Object {
+          "building_name": "002",
+          "city": "Celadon",
+          "id": "A2",
+          "state": "Johto",
+          "street": "Elmer",
+          "zip_code": "123",
+        },
+        "contactNumber": "1234567",
+        "contactPerson": "Basil Valdez",
+        "id": "1",
+        "supplierName": "Juan Dela Cruz",
+        "supplierNo": "001",
+        "tin": "12345",
+      },
+      "supplierStatusHeader": "Pending",
+      "vendorAddress": Object {
+        "building_name": "002",
+        "city": "Celadon",
+        "id": "A1",
+        "state": "Johto",
+        "street": "Elmer",
+        "zip_code": "123",
+      },
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`Tests delete a puchase order 1`] = `
+Object {
+  "data": Object {
+    "deletePurchaseOrder": Object {
+      "id": "1",
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`Tests should error when no purchase order 1`] = `
+Object {
+  "data": Object {
+    "purchaseOrder": null,
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`Tests should fetch all purchase orders admin persona 1`] = `
+Object {
+  "data": Object {
+    "allPurchaseOrders": Array [
+      Object {
+        "adminStatus": "Pending",
+        "documentDate": "03/03/20200",
+        "id": "1",
+        "items": Array [
+          Object {
+            "currency": "PHP",
+            "deliveryAddress": Object {
+              "building_name": "002",
+              "city": "Celadon",
+              "id": "A1",
+              "state": "Johto",
+              "street": "Elmer",
+              "zip_code": "123",
+            },
+            "description": "Beef",
+            "id": "2",
+            "itemNo": "001",
+            "quantity": 10,
+            "scheduleLine": Array [
+              Object {
+                "deliveryDateAndTime": "February 25,2020 4:30PM",
+                "deliveryStatus": Array [
+                  Object {
+                    "dateCreated": "February 14, 2020",
+                    "id": "2",
+                    "status": "Delivered",
+                    "timeCreated": "4:30 PM",
+                  },
+                ],
+                "id": "2",
+                "quantity": 10,
+                "totalAmount": 10000,
+                "unitPrice": 1000,
+                "uom": "kilograms",
+              },
+            ],
+            "supplierStatusItem": null,
+            "totalAmount": 10000,
+            "unitPrice": 1000,
+            "uom": "kilograms",
+          },
+        ],
+        "purchaseOrderNo": "001",
+        "shipmentNo": "123",
+        "supplier": Object {
+          "address": Object {
+            "building_name": "002",
+            "city": "Celadon",
+            "id": "A2",
+            "state": "Johto",
+            "street": "Elmer",
+            "zip_code": "123",
+          },
+          "contactNumber": "1234567",
+          "contactPerson": "Basil Valdez",
+          "id": "1",
+          "supplierName": "Juan Dela Cruz",
+          "supplierNo": "001",
+          "tin": "12345",
+        },
+        "supplierStatusHeader": "Pending",
+        "vendorAddress": Object {
+          "building_name": "002",
+          "city": "Celadon",
+          "id": "A1",
+          "state": "Johto",
+          "street": "Elmer",
+          "zip_code": "123",
+        },
+      },
+    ],
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`Tests should fetch all purchase orders filtered by status for admin persona 1`] = `
+Object {
+  "data": Object {
+    "purchaseOrdersStatus": Array [
+      Object {
+        "adminStatus": "Pending",
+        "documentDate": "03/03/20200",
+        "id": "1",
+        "items": Array [
+          Object {
+            "currency": "PHP",
+            "deliveryAddress": Object {
+              "building_name": "002",
+              "city": "Celadon",
+              "id": "A1",
+              "state": "Johto",
+              "street": "Elmer",
+              "zip_code": "123",
+            },
+            "description": "Beef",
+            "id": "2",
+            "itemNo": "001",
+            "quantity": 10,
+            "scheduleLine": Array [
+              Object {
+                "deliveryDateAndTime": "February 25,2020 4:30PM",
+                "deliveryStatus": Array [
+                  Object {
+                    "dateCreated": "February 14, 2020",
+                    "id": "2",
+                    "status": "Delivered",
+                    "timeCreated": "4:30 PM",
+                  },
+                ],
+                "id": "2",
+                "quantity": 10,
+                "totalAmount": 10000,
+                "unitPrice": 1000,
+                "uom": "kilograms",
+              },
+            ],
+            "supplierStatusItem": null,
+            "totalAmount": 10000,
+            "unitPrice": 1000,
+            "uom": "kilograms",
+          },
+        ],
+        "purchaseOrderNo": "001",
+        "shipmentNo": "123",
+        "supplier": Object {
+          "address": Object {
+            "building_name": "002",
+            "city": "Celadon",
+            "id": "A2",
+            "state": "Johto",
+            "street": "Elmer",
+            "zip_code": "123",
+          },
+          "contactNumber": "1234567",
+          "contactPerson": "Basil Valdez",
+          "id": "1",
+          "supplierName": "Juan Dela Cruz",
+          "supplierNo": "001",
+          "tin": "12345",
+        },
+        "supplierStatusHeader": "Pending",
+        "vendorAddress": Object {
+          "building_name": "002",
+          "city": "Celadon",
+          "id": "A1",
+          "state": "Johto",
+          "street": "Elmer",
+          "zip_code": "123",
+        },
+      },
+    ],
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`Tests should fetch all purchase orders filtered by status for supplier persona 1`] = `
+Object {
+  "data": Object {
+    "supplierPurchaseOrdersByStatus": Array [
+      Object {
+        "adminStatus": "Pending",
+        "documentDate": "03/03/20200",
+        "id": "1",
+        "items": Array [
+          Object {
+            "currency": "PHP",
+            "deliveryAddress": Object {
+              "building_name": "002",
+              "city": "Celadon",
+              "id": "A1",
+              "state": "Johto",
+              "street": "Elmer",
+              "zip_code": "123",
+            },
+            "description": "Beef",
+            "id": "2",
+            "itemNo": "001",
+            "quantity": 10,
+            "scheduleLine": Array [
+              Object {
+                "deliveryDateAndTime": "February 25,2020 4:30PM",
+                "deliveryStatus": Array [
+                  Object {
+                    "dateCreated": "February 14, 2020",
+                    "id": "2",
+                    "status": "Delivered",
+                    "timeCreated": "4:30 PM",
+                  },
+                ],
+                "id": "2",
+                "quantity": 10,
+                "totalAmount": 10000,
+                "unitPrice": 1000,
+                "uom": "kilograms",
+              },
+            ],
+            "supplierStatusItem": null,
+            "totalAmount": 10000,
+            "unitPrice": 1000,
+            "uom": "kilograms",
+          },
+        ],
+        "purchaseOrderNo": "001",
+        "shipmentNo": "123",
+        "supplier": Object {
+          "address": Object {
+            "building_name": "002",
+            "city": "Celadon",
+            "id": "A2",
+            "state": "Johto",
+            "street": "Elmer",
+            "zip_code": "123",
+          },
+          "contactNumber": "1234567",
+          "contactPerson": "Basil Valdez",
+          "id": "1",
+          "supplierName": "Juan Dela Cruz",
+          "supplierNo": "001",
+          "tin": "12345",
+        },
+        "supplierStatusHeader": "Pending",
+        "vendorAddress": Object {
+          "building_name": "002",
+          "city": "Celadon",
+          "id": "A1",
+          "state": "Johto",
+          "street": "Elmer",
+          "zip_code": "123",
+        },
+      },
+    ],
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`Tests should fetch all purchase orders supplier persona 1`] = `
+Object {
+  "data": Object {
+    "supplierAllPurchaseOrders": Array [
+      Object {
+        "adminStatus": "Pending",
+        "documentDate": "03/03/20200",
+        "id": "1",
+        "items": Array [
+          Object {
+            "currency": "PHP",
+            "deliveryAddress": Object {
+              "building_name": "002",
+              "city": "Celadon",
+              "id": "A1",
+              "state": "Johto",
+              "street": "Elmer",
+              "zip_code": "123",
+            },
+            "description": "Beef",
+            "id": "2",
+            "itemNo": "001",
+            "quantity": 10,
+            "scheduleLine": Array [
+              Object {
+                "deliveryDateAndTime": "February 25,2020 4:30PM",
+                "deliveryStatus": Array [
+                  Object {
+                    "dateCreated": "February 14, 2020",
+                    "id": "2",
+                    "status": "Delivered",
+                    "timeCreated": "4:30 PM",
+                  },
+                ],
+                "id": "2",
+                "quantity": 10,
+                "totalAmount": 10000,
+                "unitPrice": 1000,
+                "uom": "kilograms",
+              },
+            ],
+            "supplierStatusItem": null,
+            "totalAmount": 10000,
+            "unitPrice": 1000,
+            "uom": "kilograms",
+          },
+        ],
+        "purchaseOrderNo": "001",
+        "shipmentNo": "123",
+        "supplier": Object {
+          "address": Object {
+            "building_name": "002",
+            "city": "Celadon",
+            "id": "A2",
+            "state": "Johto",
+            "street": "Elmer",
+            "zip_code": "123",
+          },
+          "contactNumber": "1234567",
+          "contactPerson": "Basil Valdez",
+          "id": "1",
+          "supplierName": "Juan Dela Cruz",
+          "supplierNo": "001",
+          "tin": "12345",
+        },
+        "supplierStatusHeader": "Pending",
+        "vendorAddress": Object {
+          "building_name": "002",
+          "city": "Celadon",
+          "id": "A1",
+          "state": "Johto",
+          "street": "Elmer",
+          "zip_code": "123",
+        },
+      },
+    ],
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`Tests should fetch one purchase order admin persona 1`] = `
+Object {
+  "data": Object {
+    "purchaseOrder": Object {
+      "adminStatus": "Pending",
+      "documentDate": "03/03/20200",
+      "id": "1",
+      "items": Array [
+        Object {
+          "currency": "PHP",
+          "deliveryAddress": Object {
+            "id": "A1",
+          },
+          "description": "Beef",
+          "id": "2",
+          "itemNo": "001",
+          "quantity": 10,
+          "scheduleLine": Array [
+            Object {
+              "deliveryDateAndTime": "February 25,2020 4:30PM",
+              "deliveryStatus": Array [
+                Object {
+                  "dateCreated": "February 14, 2020",
+                  "id": "2",
+                  "status": "Delivered",
+                  "timeCreated": "4:30 PM",
+                },
+              ],
+              "id": "2",
+              "quantity": 10,
+              "totalAmount": 10000,
+              "unitPrice": 1000,
+              "uom": "kilograms",
+            },
+          ],
+          "supplierStatusItem": null,
+          "totalAmount": 10000,
+          "unitPrice": 1000,
+          "uom": "kilograms",
+        },
+      ],
+      "purchaseOrderNo": "001",
+      "shipmentNo": "123",
+      "supplier": Object {
+        "address": Object {
+          "building_name": "002",
+          "city": "Celadon",
+          "id": "A2",
+          "state": "Johto",
+          "street": "Elmer",
+          "zip_code": "123",
+        },
+        "contactNumber": "1234567",
+        "contactPerson": "Basil Valdez",
+        "id": "1",
+        "supplierName": "Juan Dela Cruz",
+        "supplierNo": "001",
+        "tin": "12345",
+      },
+      "supplierStatusHeader": "Pending",
+      "vendorAddress": Object {
+        "building_name": "002",
+        "city": "Celadon",
+        "id": "A1",
+        "state": "Johto",
+        "street": "Elmer",
+        "zip_code": "123",
+      },
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`Tests should fetch one purchase order supplier persona 1`] = `
+Object {
+  "data": Object {
+    "purchaseOrderSupplier": Object {
+      "adminStatus": "Pending",
+      "documentDate": "03/03/20200",
+      "id": "1",
+      "items": Array [
+        Object {
+          "currency": "PHP",
+          "deliveryAddress": Object {
+            "id": "A1",
+          },
+          "description": "Beef",
+          "id": "2",
+          "itemNo": "001",
+          "quantity": 10,
+          "scheduleLine": Array [
+            Object {
+              "deliveryDateAndTime": "February 25,2020 4:30PM",
+              "deliveryStatus": Array [
+                Object {
+                  "dateCreated": "February 14, 2020",
+                  "id": "2",
+                  "status": "Delivered",
+                  "timeCreated": "4:30 PM",
+                },
+              ],
+              "id": "2",
+              "quantity": 10,
+              "totalAmount": 10000,
+              "unitPrice": 1000,
+              "uom": "kilograms",
+            },
+          ],
+          "supplierStatusItem": null,
+          "totalAmount": 10000,
+          "unitPrice": 1000,
+          "uom": "kilograms",
+        },
+      ],
+      "purchaseOrderNo": "001",
+      "shipmentNo": "123",
+      "supplier": Object {
+        "address": Object {
+          "building_name": "002",
+          "city": "Celadon",
+          "id": "A2",
+          "state": "Johto",
+          "street": "Elmer",
+          "zip_code": "123",
+        },
+        "contactNumber": "1234567",
+        "contactPerson": "Basil Valdez",
+        "id": "1",
+        "supplierName": "Juan Dela Cruz",
+        "supplierNo": "001",
+        "tin": "12345",
+      },
+      "supplierStatusHeader": "Pending",
+      "vendorAddress": Object {
+        "building_name": "002",
+        "city": "Celadon",
+        "id": "A1",
+        "state": "Johto",
+        "street": "Elmer",
+        "zip_code": "123",
+      },
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`Tests update a purchase order 1`] = `
+Object {
+  "data": Object {
+    "updatePurchaseOrder": Object {
+      "adminStatus": "Recieved",
+      "id": "1",
+      "supplierStatusHeader": "Delivered",
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`Tests update a purchase order admin status 1`] = `
+Object {
+  "data": Object {
+    "updateAdminStatus": Object {
+      "adminStatus": "Recieved",
+      "id": "1",
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;

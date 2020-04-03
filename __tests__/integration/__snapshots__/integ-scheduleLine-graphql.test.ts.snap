@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests create a schedule line 1`] = `
+Object {
+  "data": Object {
+    "createScheduleLine": Object {
+      "deliveryDateAndTime": "February 25,2020 4:30PM",
+      "deliveryStatus": Array [
+        Object {
+          "dateCreated": "February 14, 2020",
+          "id": "1",
+          "status": "Dispatched",
+          "timeCreated": "4:30 PM",
+        },
+      ],
+      "id": "1",
+      "quantity": 10,
+      "totalAmount": 10000,
+      "unitPrice": 1000,
+      "uom": "kilograms",
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`Tests delete a schedule Line 1`] = `
+Object {
+  "data": Object {
+    "deleteScheduleLine": null,
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`Tests should error when no schedule line 1`] = `
+Object {
+  "data": Object {
+    "scheduleLine": null,
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`Tests should fetch all schedule lines 1`] = `
+Object {
+  "data": Object {
+    "allScheduleLines": Array [
+      null,
+      null,
+    ],
+  },
+  "errors": Array [
+    [GraphQLError: Cannot return null for non-nullable field ScheduleLine.id.],
+    [GraphQLError: Cannot return null for non-nullable field ScheduleLine.id.],
+  ],
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`Tests should fetch one schedule line 1`] = `
+Object {
+  "data": Object {
+    "scheduleLine": null,
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`Tests update a schedule line 1`] = `
+Object {
+  "data": Object {
+    "updateScheduleLine": null,
+  },
+  "errors": Array [
+    [GraphQLError: Cannot read property 'quantity' of null],
+  ],
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;

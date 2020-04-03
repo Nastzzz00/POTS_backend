@@ -1,0 +1,102 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests create a supplier status 1`] = `
+Object {
+  "data": Object {
+    "createSupplierStatus": Object {
+      "id": "1",
+      "status": "yeeeeee",
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`Tests delete a supplier status 1`] = `
+Object {
+  "data": Object {
+    "deleteSupplierStatus": null,
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`Tests should error when no supplier status 1`] = `
+Object {
+  "data": Object {
+    "supplierStatus": null,
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`Tests should fetch all supplier status 1`] = `
+Object {
+  "data": Object {
+    "allSupplierStatus": Array [
+      null,
+      null,
+    ],
+  },
+  "errors": Array [
+    [GraphQLError: Cannot return null for non-nullable field SupplierStatus.id.],
+    [GraphQLError: Cannot return null for non-nullable field SupplierStatus.id.],
+  ],
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`Tests should fetch one supplier status 1`] = `
+Object {
+  "data": Object {
+    "supplierStatus": null,
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`Tests update a supplier status 1`] = `
+Object {
+  "data": Object {
+    "updateSupplierStatus": null,
+  },
+  "errors": Array [
+    [GraphQLError: Cannot read property 'status' of null],
+  ],
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;

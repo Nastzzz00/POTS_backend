@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests login as admin  1`] = `
+Object {
+  "data": Object {
+    "login": Object {
+      "loggedIn": true,
+      "message": "Admin Logged In",
+      "userLevel": "Admin",
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`Tests login as supplier  1`] = `
+Object {
+  "data": Object {
+    "login": Object {
+      "loggedIn": true,
+      "message": "Supplier Logged In",
+      "userLevel": "Supplier",
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`Tests login as supplier  2`] = `
+Object {
+  "data": Object {
+    "login": Object {
+      "loggedIn": false,
+      "message": "Wrong Credentials",
+      "userLevel": "none",
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
